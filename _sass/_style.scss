@@ -1,0 +1,28 @@
+@import 'variables';
+
+html {
+    @include fillPage();
+    padding: 0;
+    margin: 0;
+    body {
+        @include fillPage();
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        padding: 0;
+        margin: 0;
+        main {
+            @include fillPage();
+            justify-content: center;
+            align-items: center;
+            h1 {
+                text-transform: uppercase;
+                letter-spacing: 3px;
+            }
+            img {
+                //margin: auto;
+                height: 100%;
+                width: auto;
+                max-height: 50vh;
+            }
+        }
+    }
+}

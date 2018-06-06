@@ -1,0 +1,14 @@
+
+@mixin fillPage() {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+@mixin centerContents() {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
