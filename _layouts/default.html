@@ -1,9 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% include head.html %}
-    <body>
-        <main>
-            {{ content }}
-        </main>
-    </body>
+  {% include head.html %}
+  <body>
+    <img id="branch-bg-img" src="/img/branch.png">
+    <!-- Mobile Navigation-->
+    <nav class="mobile navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+      <ul class="nav navmenu-nav">
+        <li class="active">
+          <a href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="/"><i class="fas fa-book"></i> Stories</a>
+        </li>
+        <li>
+          <a href="/"><i class="far fa-images"></i> Gallery</a>
+        </li>
+        <li>
+          <a href="/"><i class="far fa-calendar-alt"></i> Itinerary</a>
+        </li>
+        <li>
+          <a href="/"><i class="fas fa-bed"></i> Accomodations</a>
+        </li>
+        <li>
+          <a href="/"><i class="fas fa-gift"></i> Gift Registry</a>
+        </li>
+        <li>
+          <a href="/"><i class="fas fa-check-circle"></i> RSVP</a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <button id="nav-toggle" type="button" class="navbar navbar-default navbar-fixed-top navbar-toggle" data-toggle="offcanvas" data-target="nav.mobile" data-canvas="body">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div id="header-details">
+        <div id="bride-groom-names">
+          <div class="name-block">
+            <span class="first-name">Courtney</span>
+            <span class="last-name">Anne Elliott</span>
+          </div>
+          <div class="name-block">
+            <span class="first-name">Bradley</span>
+            <span class="last-name">Michael Keys</span>
+          </div>
+        </div>
+        <nav class="desktop">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Stories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Itinerary</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Accomodations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Gift Registry</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">RSVP</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container-fluid">
+      {{ content }}
+    </main>
+  </body>
 </html>

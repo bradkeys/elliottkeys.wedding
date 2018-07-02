@@ -1,28 +1,132 @@
 @import 'variables';
 
 html {
+  @include fillPage();
+  padding: 0;
+  margin: 0;
+  body {
     @include fillPage();
+    font-family: Garamond, Georgia, serif;
     padding: 0;
     margin: 0;
-    body {
-        @include fillPage();
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        padding: 0;
-        margin: 0;
-        main {
-            @include fillPage();
+    #branch-bg-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 33%;
+      height: auto;
+      z-index: -1;
+    }
+    nav.mobile {
+      .nav > li {
+        position: relative;
+        display: block;
+        width: 100%;
+        a {
+          position: relative;
+          display: block;
+          padding: 10px 15px;
+          &:hover {
+            text-decoration: none;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    header {
+      width: 75%;
+      margin-top: 30px;
+      margin-left: auto;
+      @include centerContents();
+      #nav-toggle {
+        display: none;
+        border: none;
+        background: none;
+        &:hover { cursor: pointer; }
+      }
+      #header-details {
+        #bride-groom-names {
+          @include centerContents();
+          margin-bottom: 15px;
+          width: 500px;
+          .name-block {
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            h1 {
-                text-transform: uppercase;
-                letter-spacing: 3px;
+            text-transform: uppercase;
+            .first-name {
+              font-weight: bold;
+              font-size: 2em;
             }
-            img {
-                //margin: auto;
-                height: 100%;
-                width: auto;
-                max-height: 50vh;
+            .last-name {
+              font-size: 1.2em;
+              letter-spacing: 3px;
+              line-height: 5px;
             }
+          }
         }
+        nav.desktop {
+          ul {
+            li {
+              a {
+                color: black;
+                &.active { font-weight: bold; }
+                &:hover { color: $linkColor; }
+              }
+            }
+          }
+        }
+      }
     }
+    main {
+      @include fillPage();
+      #home {
+        @include fillPage();
+        justify-content: center;
+        align-items: center;
+        h1 {
+          text-transform: uppercase;
+          letter-spacing: 3px;
+        }
+        img {
+          height: 100%;
+          width: auto;
+          max-height: 50vh;
+        }
+      }
+      #rsvp {
+        @include fillPage();
+        justify-content: center;
+        align-items: center;
+        #typeform-full {
+          width: 100%;
+          height: 100%;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+// ------- Responsive Rules --------
+
+@media (max-width: 768px) {
+  html body {
+    #branch-bg-img { display: none; }
+    header {
+      width: 100%;
+      margin-top: 0;
+      #nav-toggle { display: inline-block; }
+      #header-details nav.desktop { display: none; }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  html body {
+    right: unset !important;
+    left: unset !important;
+    nav.mobile { display: none !important; }
+  }
 }
