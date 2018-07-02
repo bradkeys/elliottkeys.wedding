@@ -6,27 +6,13 @@
     <!-- Mobile Navigation-->
     <nav class="mobile navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
       <ul class="nav navmenu-nav">
-        <li class="active">
-          <a href="/"><i class="fas fa-home"></i> Home</a>
-        </li>
-        <li>
-          <a href="/"><i class="fas fa-book"></i> Stories</a>
-        </li>
-        <li>
-          <a href="/"><i class="far fa-images"></i> Gallery</a>
-        </li>
-        <li>
-          <a href="/"><i class="far fa-calendar-alt"></i> Itinerary</a>
-        </li>
-        <li>
-          <a href="/"><i class="fas fa-bed"></i> Accomodations</a>
-        </li>
-        <li>
-          <a href="/"><i class="fas fa-gift"></i> Gift Registry</a>
-        </li>
-        <li>
-          <a href="/"><i class="fas fa-check-circle"></i> RSVP</a>
-        </li>
+        {% for node in site.pages %}
+          {% if node.title %}
+          <li class="{% if page.url == node.url %}active{% endif %}">
+            <a href="{{node.url}}" ><i class="fas fa-{{node.icon}}"></i> {{node.title}}</a>
+          </li>
+          {% endif %}
+        {% endfor %}
       </ul>
     </nav>
     <header>
@@ -46,27 +32,13 @@
         </div>
         <nav class="desktop">
           <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">Stories</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">Itinerary</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">Accomodations</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">Gift Registry</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">RSVP</a>
-            </li>
+            {% for node in site.pages %}
+              {% if node.title %}
+              <li class="nav-item">
+                <a href="{{node.url}}" class="nav-link{% if page.url == node.url %} active{% endif %}">{{node.title}}</a>
+              </li>
+              {% endif %}
+            {% endfor %}
           </ul>
         </nav>
       </div>

@@ -18,6 +18,7 @@ html {
       z-index: -1;
     }
     nav.mobile {
+      font-family: Arial, Helvetica, sans-serif;
       .nav > li {
         position: relative;
         display: block;
@@ -119,6 +120,15 @@ html {
       margin-top: 0;
       #nav-toggle { display: inline-block; }
       #header-details nav.desktop { display: none; }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  html body {
+    header #header-details #bride-groom-names {
+      width: 300px;
+      font-size: 0.65em;
     }
   }
 }
