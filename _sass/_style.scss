@@ -106,6 +106,7 @@ html {
           @include centerContents();
           flex-wrap: wrap;
           #events-list {
+            padding: 0 5px;
             margin: 0 25px 15px 25px;
             table {
               margin-bottom: 15px;
@@ -113,7 +114,10 @@ html {
                 width: 25%;
                 font-weight: bold;
               }
-              .event-description { width: 75%; }
+              .event-description {
+                width: 75%;
+                p { margin: 0; }
+              }
             }
           }
           #resort-map {
@@ -156,6 +160,12 @@ html {
       width: 300px;
       font-size: 0.65em;
     }
+  }
+}
+
+@media (max-width: 400px) {
+  html body main {
+    #events #events-wrapper #events-list { margin-left: 0; margin-right: 0; }
   }
 }
 
