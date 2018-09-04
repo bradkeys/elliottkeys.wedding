@@ -82,6 +82,8 @@ html {
     }
     main {
       @include fillPage();
+      @include centerContents();
+      margin-top: 15px;
       #home {
         @include fillPage();
         justify-content: center;
@@ -94,6 +96,30 @@ html {
           height: 100%;
           width: auto;
           max-height: 50vh;
+        }
+      }
+      #events {
+        @include fillPage();
+        #events-wrapper {
+          margin: 0 auto;
+          max-width: 900px;
+          @include centerContents();
+          flex-wrap: wrap;
+          #events-list {
+            margin: 0 25px 15px 25px;
+            table {
+              margin-bottom: 15px;
+              .event-time {
+                width: 25%;
+                font-weight: bold;
+              }
+              .event-description { width: 75%; }
+            }
+          }
+          #resort-map {
+            max-height: 500px;
+            min-width: 320px;
+          }
         }
       }
       #rsvp {

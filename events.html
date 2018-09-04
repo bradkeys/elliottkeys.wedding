@@ -1,0 +1,41 @@
+---
+layout: page
+title: Events
+icon: book
+events:
+    Friday:
+      "4:00 PM": "Guests staying at resort may check-in"
+      "5:00 PM": "Outdoor BBQ dinner behind the Main Inn"
+      "7:00 PM": "Sunset cruise on Lake Joseph. Board at the Main Dock"
+      "9:00 PM": "Late-night bonfire. Grab a blanket and get cozy by the fire"
+    Saturday:
+      "8-10:00 AM": "Hot buffet breakfast in the Main Inn"
+      "3:00 PM": "Wedding ceremony on The Point"
+      "4:00 PM": "Cocktails and hors d'oeuvres on the Main Inn deck"
+      "6:00 PM": "Dinner and dance at the Main Inn"
+    Sunday:
+      "8-10:00 AM": "Hot buffet breakfast in the Main Inn"
+      "11:00 AM": "Check-out time for guests staying at the resort"
+
+---
+
+<div id="events">
+  <div id="events-wrapper">
+    <div id="events-list">
+      {% for day in page.events %}
+        <h2>{{ day[0] }}</h2>
+        <table>
+          {% for time in day[1] %}
+            <tr>
+              <td class="event-time">{{ time[0] }}</td>
+              <td class="event-description">{{ time[1] }}</td>
+            </tr>
+          {% endfor %}
+        </table>
+      {% endfor %}
+    </div>
+    <a href="/img/sherwood-map.jpg">
+      <img id="resort-map" src="/img/sherwood-map.jpg">
+    </a>
+  </div>
+</div>
