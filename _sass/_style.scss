@@ -87,14 +87,14 @@ html {
       max-width: 900px;
       margin: auto;
       margin-top: 1rem;
-      #accomodations {
+      #accommodations {
         @include fillPage();
         #logo-inn {
           margin: auto;
           width: 245px;
           height: 90px;
         }
-        #accomodations-info {
+        #accommodations-info {
           margin-bottom: 1rem;
           p { padding: 0 1rem; }
           img { width: 100%; }
