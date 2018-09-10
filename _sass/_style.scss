@@ -111,14 +111,14 @@ html {
           margin: auto;
         }
       }
-      #events {
+      #itinerary {
         @include fillPage();
-        #events-wrapper {
+        #itinerary-wrapper {
           margin: 0 auto;
           max-width: 900px;
           @include centerContents();
           flex-wrap: wrap;
-          #events-list {
+          #event-list {
             padding: 0 5px;
             margin: 0 25px 15px 25px;
             table {
