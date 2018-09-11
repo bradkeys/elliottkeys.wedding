@@ -26,6 +26,9 @@ html {
       border-top: none;
       border-bottom: none;
       background-color: rgba(255, 255, 255, 0.5);
+      .navmenu, .navbar-offcanvas {
+        width: 200px;
+      }
       nav.mobile {
         font-family: Arial, Helvetica, sans-serif;
         .nav > li {
