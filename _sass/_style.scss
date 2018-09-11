@@ -19,7 +19,7 @@ html {
     }
     #site-wrapper {
       @include fillPage();
-      max-width: 925px;
+      max-width: 900px;
       font-family: Garamond, Georgia, serif;
       margin: auto;
       border: 1px solid #dce5d2;
@@ -75,6 +75,7 @@ html {
             }
           }
           nav.desktop {
+            font-size: 1.3em;
             ul {
               li {
                 a {
@@ -93,28 +94,64 @@ html {
         max-width: 900px;
         margin: auto;
         margin-top: 1rem;
+        font-size: 1.2em;
+        font-family: Garamond, Georgia, serif;
         #accommodations {
           @include fillPage();
+          h2 {
+            background-color: #4e5b26b3;
+            color: white;
+            text-align: center;
+            width: 100%;
+          }
           #logo-inn {
             margin: auto;
             width: 245px;
             height: 90px;
           }
           #accommodations-info {
-            margin-bottom: 1rem;
             p { padding: 0 1rem; }
             img { width: 100%; }
           }
-          #logo-spa {
-            margin: auto;
-            width: 320px;
-            height: 81px;
+          #amenities {
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            text-align: center;
+            // background-color: #4e5b261a;
+            #amenity-list {
+              @include centerContents();
+              flex-wrap: wrap;
+              .amenity {
+                background-color: rgba(0, 0, 0, 0.03);
+                margin: 3px 0;
+                padding: 3px;
+                border-radius: 5px;
+              }
+            }
+            #amenity-photos {
+              @include centerContents();
+              width: 100%;
+              margin-top: 15px;
+              img {
+                max-width: 100px;
+                border-radius: 25px;
+                margin: 5px;
+              }
+            }
           }
-          #logo-info {
-  
+          #spa {
+            margin-bottom: 15px;
+            #logo-spa {
+              margin: auto;
+              width: 320px;
+              height: 81px;
+            }
           }
-          iframe {
-            margin: auto;
+          #booking {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 15px;
           }
         }
         #itinerary {
@@ -200,7 +237,28 @@ html {
 @media (max-width: 400px) {
   html body #site-wrapper {
     border: none;
-    main #events #events-wrapper #events-list { margin-left: 0; margin-right: 0; }
+    main {
+      #accommodations {
+        #amenities {
+          margin-bottom: 5px;
+          #amenity-list {
+            font-size: 0.8em;
+            .amenity {
+              margin: 1px 0;
+              padding: 1px;
+            }
+          }
+          #amenity-photos {
+            margin-top: 5px;
+            img {
+              border-radius: 15px;
+              margin: 5px;
+            }
+          }
+        }
+      }
+      #events #events-wrapper #events-list { margin-left: 0; margin-right: 0; }
+    }
   }
 }
 
