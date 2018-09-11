@@ -195,8 +195,9 @@ html {
 }
 
 @media (max-width: 400px) {
-  html body #site-wrapper main {
-    #events #events-wrapper #events-list { margin-left: 0; margin-right: 0; }
+  html body #site-wrapper {
+    border: none;
+    main #events #events-wrapper #events-list { margin-left: 0; margin-right: 0; }
   }
 }
 
