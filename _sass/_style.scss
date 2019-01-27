@@ -96,6 +96,9 @@ html {
         margin-top: 1rem;
         font-size: 1.2em;
         font-family: Garamond, Georgia, serif;
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
         #accommodations {
           @include fillPage();
           h2 {
@@ -189,14 +192,15 @@ html {
           @include fillPage();
           justify-content: center;
           align-items: center;
-          h1 {
-            text-transform: uppercase;
+          h3, h4 {
             letter-spacing: 3px;
+            text-align: center;
           }
           img {
-            height: 100%;
-            width: auto;
-            max-height: 50vh;
+            height: auto;
+            width: 95vw;
+            max-width: 880px;
+            border-radius: 10px;
           }
         }
         #registry, #rsvp {
