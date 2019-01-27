@@ -196,12 +196,13 @@ html {
             max-height: 50vh;
           }
         }
-        #registry {
+        #registry, #rsvp {
           h2, p {
             text-align: center;
           }
         }
         #rsvp {
+          /*
           @include fillPage();
           justify-content: center;
           align-items: center;
@@ -210,6 +211,7 @@ html {
             height: 100%;
             border: none;
           }
+          */
         }
       } 
     }
