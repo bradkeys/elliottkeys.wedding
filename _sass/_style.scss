@@ -196,6 +196,11 @@ html {
             max-height: 50vh;
           }
         }
+        #registry {
+          h2, p {
+            text-align: center;
+          }
+        }
         #rsvp {
           @include fillPage();
           justify-content: center;
