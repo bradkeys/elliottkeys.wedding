@@ -177,8 +177,11 @@ html {
               }
             }
             #resort-map {
-              max-height: 500px;
-              min-width: 320px;
+              padding-bottom: 20px;
+              img {
+                max-height: 500px;
+                min-width: 320px;
+              }
             }
           }
         }
