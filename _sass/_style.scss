@@ -73,6 +73,17 @@ html {
                 line-height: 5px;
               }
             }
+            #ampersand {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              font-size: 5em;
+              font-family: 'Snell Roundhand', 'cursive';
+              opacity: 0.5;
+              margin: 0 -35px;
+              z-index: -1;
+            }
           }
           nav.desktop {
             font-size: 1.3em;
