@@ -145,6 +145,7 @@ html {
             }
             #amenity-photos {
               @include centerContents();
+              flex-wrap: wrap;
               width: 100%;
               margin-top: 15px;
               img {
@@ -186,6 +187,7 @@ html {
               padding: 0 15px;
               #room-photos {
                 @include centerContents();
+                flex-wrap: wrap;
                 width: 100%;
                 margin-bottom: 15px;
                 img {
