@@ -275,13 +275,11 @@ html {
           }
         }
         #registry, #rsvp {
-          padding-top: 20vh;
           h2, p {
             text-align: center;
           }
         }
         #rsvp {
-          /*
           @include fillPage();
           justify-content: center;
           align-items: center;
@@ -290,7 +288,6 @@ html {
             height: 100%;
             border: none;
           }
-          */
         }
       } 
     }
