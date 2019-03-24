@@ -111,6 +111,7 @@ html {
         h2 { font-size: 2rem; }
         h3 { font-size: 1.5rem; }
         h4 { font-size: 1.25rem; }
+        // --- Accomodations ---
         #accommodations {
           @include fillPage();
           h2 {
@@ -132,7 +133,6 @@ html {
             margin-bottom: 15px;
             padding-bottom: 5px;
             text-align: center;
-            // background-color: #4e5b261a;
             #amenity-list {
               @include centerContents();
               flex-wrap: wrap;
@@ -209,6 +209,7 @@ html {
             }
           }
         }
+        // --- Gallery ---
         #gallery {
           display: grid;
           grid-template-columns: repeat(5, auto);
@@ -228,6 +229,7 @@ html {
             }
           }
         }
+        // --- Itinerary ---
         #itinerary {
           @include fillPage();
           #itinerary-wrapper {
@@ -259,6 +261,7 @@ html {
             }
           }
         }
+        // --- Welcome/Home/Index ---
         #welcome {
           @include fillPage();
           justify-content: center;
@@ -279,6 +282,7 @@ html {
             text-align: center;
           }
         }
+        // --- Registry ---
         #registry {
           @include fillPage();
           justify-content: center;
@@ -287,6 +291,7 @@ html {
             .mr_logo { display: none !important; }
           }
         }
+        // --- RSVP ---
         #rsvp {
           @include fillPage();
           justify-content: center;
@@ -347,7 +352,11 @@ html {
           }
         }
       }
-      #events #events-wrapper #events-list { margin-left: 0; margin-right: 0; }
+      #itinerary #itinerary-wrapper #event-list {
+        padding: 0 5px;
+        margin: 0 5px;
+        table { font-size: 1rem; }
+      }
     }
   }
 }
