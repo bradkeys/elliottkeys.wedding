@@ -185,6 +185,13 @@ html {
               flex-direction: column;
               align-items: center;
               padding: 0 15px;
+              #booking-hours {
+                text-align: center;
+                border-radius: 15px;
+                background-color: rgba(173, 216, 230, 0.459);
+                width: 100%;
+                margin-bottom: 15px;
+              }
               #room-photos {
                 @include centerContents();
                 flex-wrap: wrap;
