@@ -306,6 +306,10 @@ html {
           @include fillPage();
           justify-content: center;
           align-items: center;
+          p {
+            margin: 0 5px;
+            text-align: justify;
+          }
           #typeform-full {
             @include fillPage();
             border: none;
